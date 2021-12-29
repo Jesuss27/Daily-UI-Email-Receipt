@@ -5,21 +5,31 @@
 }
 :root{
     --h2-color:#F2C8A7;
+    --h2-font-m:36px;
+    --h2-font-l:42px;
+    --h2-font-xl:48px;
     --p-font-color:#8A8A8A;
     --span-font-color:#202A48;
+    --span-font-m:20px;
+    --span-font-l:30px;
+    --span-font-xl:36px;
     --p-font-xs:16px;
-    --p-font-m:18px;
-    --p-font-l:20px;
-    --p-font-xl:24px;
-    --h1-font-m:26px;
-    --h1-font-l:30px;
-    --h1-font-xl:36px;
+    --p-font-m:20px;
+    --p-font-l:30px;
+    --p-font-xl:36px;
+    --h1-font-m:32px;
+    --h1-font-l:40px;
+    --h1-font-xl:48px;
 }
 body{
     font-family:"Poppins", sans-serif
 }
 .side-tab{
     display:none;
+}
+h1{
+    color:white;
+    font-size:var(--h1-font-m)
 }
 h2{
     color:var(--h2-color);
@@ -34,6 +44,9 @@ span{
 ol{
     list-style: none;
 }
+.info-container{
+    padding:1em;
+}
 .container{
     padding:0.5em;
 }
@@ -42,10 +55,10 @@ ol{
     flex-direction:column;
     justify-content: space-between;
 }
-
-.order-specifics{
-
+.info-container{
+    min-width:300px;
 }
+
 li{
    display:flex;
    align-items: center; 
@@ -61,4 +74,91 @@ li p{
 }
 .grand-total{
     color:#3EA545;
+}
+
+@media screen and (min-width:430px){
+    .container{
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        height:100vh;
+        align-items: center;
+    }
+    .side-tab{
+        display:block;
+        background:linear-gradient(#EFBE67,#F6C4D7);
+        border-radius:50px;
+        padding:2em;
+        width:100%;
+        height:100%;
+    }
+    .info-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:60%;
+    }
+    .order-details{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+    }
+    .order-specifics{
+        height:25%;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    h1{
+        font-size:var(--h1-font-m)
+    }
+    h2{
+        font-size:var(--h2-font-m)
+    }
+    p{
+        font-size:var(--p-font-m)
+    }
+    span{
+        font-size:var(--span-font-m)
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    h1{
+        font-size:var(--h1-font-l)
+    }
+    h2{
+        font-size:var(--h2-font-l)
+    }
+    p{
+        font-size:var(--p-font-l)
+    }
+    span{
+        font-size:var(--span-font-l)
+    }
+    .info-container{
+        height:80%;
+        padding:3.5em 6em 3.5em 3.5em;
+    }
+
+}
+
+@media screen and (min-width:1440px){
+    h1{
+        font-size:var(--h1-font-xl)
+    }
+    h2{
+        font-size:var(--h2-font-xl)
+    }
+    p{
+        font-size:var(--p-font-xl)
+    }
+    span{
+        font-size:var(--span-font-xl)
+    }
+    .info-container{
+        height:100%;
+        padding:3.5em 6em 3.5em 3.5em;
+    }
+
 }

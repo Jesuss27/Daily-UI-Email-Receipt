@@ -57,6 +57,7 @@ ol{
 }
 .info-container{
     min-width:300px;
+    min-height:600px;
 }
 
 li{
@@ -75,6 +76,10 @@ li p{
 .grand-total{
     color:#3EA545;
 }
+.ice-cream-svg{
+    position:absolute;
+    display:none;
+}
 
 @media screen and (min-width:430px){
     .container{
@@ -86,6 +91,7 @@ li p{
     .side-tab{
         display:block;
         background:linear-gradient(#EFBE67,#F6C4D7);
+        position:relative;
         border-radius:50px;
         padding:2em;
         width:100%;
@@ -140,6 +146,20 @@ li p{
         height:80%;
         padding:3.5em 6em 3.5em 3.5em;
     }
+    .ice-cream-svg{
+        display:block;
+        position:absolute;
+        top:40%;
+        left:0;
+        width:340px;
+        height:300px;
+    }
+    .ice-cream-svg svg{
+        width:100%;
+        height:100%;
+    }
+
+
 
 }
 
@@ -159,6 +179,10 @@ li p{
     .info-container{
         height:100%;
         padding:3.5em 6em 3.5em 3.5em;
+    }
+    .ice-cream-svg{
+        width:450px;
+        height:400px;
     }
 
 }
